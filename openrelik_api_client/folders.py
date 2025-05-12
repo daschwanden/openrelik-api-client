@@ -57,8 +57,8 @@ class FoldersAPI:
         Raises:
             HTTPError: If the API request failed.
         """
-        folder_id = None
         endpoint = f"{self.api_client.base_url}/folders/{folder_id}/folders"
+        folder_id = None
         data = {"display_name": display_name}
         response = self.api_client.session.post(endpoint, json=data)
         response.raise_for_status()
